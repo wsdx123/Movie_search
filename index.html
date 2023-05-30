@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Movie Search</title>
+    <style>
+      * {
+        font-family: "Gowun Dodum", sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      .movie {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mytitle {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 75px;
+        width: 100%;
+        margin: 0;
+        transition: all 0.75s;
+      }
+      .mytitle:hover {
+        background-color: black;
+        transition: all 0.75s;
+      }
+      .logo {
+        height: 75px;
+        margin-left: 20px;
+      }
+      .mytitle > div {
+        margin-right: 10px;
+        align-self: ;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        margin-top: 75px;
+      }
+      @media (max-width: 1205px) {
+        .container {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+      .card {
+        display: flex;
+        padding: 20px;
+      }
+      .search {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        margin-right: 20px;
+      }
+      .inputbox {
+        width: 100%;
+        padding: 5px 50px 5px 10px;
+        font-size: 20px;
+
+        border-radius: 15px;
+        border: none;
+      }
+      .submitBtn {
+        position: absolute;
+        top: 10px;
+        left: 83%;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="movie">
+      <header class="mytitle">
+        <img src="netflix-logo.png" class="logo" />
+        <form class="search">
+          <input type="text" class="inputbox" />
+          <button type="submit" class="submitBtn">
+            <img src="search.png" width="20px" />
+          </button>
+        </form>
+      </header>
+      <main class="container">
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>이미지</div>
+          <div>
+            <h2>영화제목</h2>
+            <h3>평점</h3>
+            <p>summary</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
