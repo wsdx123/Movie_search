@@ -26,6 +26,7 @@
       .mytitle {
         position: fixed;
         display: flex;
+        z-index: 1;
         justify-content: space-between;
         align-items: center;
         min-height: 75px;
@@ -37,10 +38,6 @@
       .logo {
         height: 75px;
         margin-left: 20px;
-      }
-      .mytitle > div {
-        margin-right: 10px;
-        align-self: ;
       }
       .container {
         display: grid;
@@ -59,33 +56,40 @@
         background-color: white;
         border-radius: 10px;
         margin: 20px;
+        transition: all 0.25s;
       }
-      /* .container > div:hover {
-        translate: ;
-      } */
+      .container > div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 18px -7px rgba(0, 0, 0, 1);
+      }
+
       .mvImg {
         margin-right: 10px;
+      }
+
+      .noResult {
+        position: absolute;
+        top: 300px;
+        align-self: center;
       }
 
       .search {
         position: relative;
         display: flex;
         align-items: center;
-
         margin-right: 20px;
       }
       .inputbox {
         width: 100%;
         padding: 5px 50px 5px 10px;
         font-size: 20px;
-
         border-radius: 15px;
         border: none;
       }
       .submitBtn {
         position: absolute;
         top: 10px;
-        left: 83%;
+        left: 85%;
         border: none;
         background-color: white;
         cursor: pointer;
