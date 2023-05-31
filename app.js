@@ -1,5 +1,6 @@
 const searchForm = document.querySelector("#form");
 const searchInput = document.querySelector(".inputbox");
+const noResult = document.querySelector(".noResult");
 
 const options = {
   method: "GET",
@@ -56,21 +57,20 @@ searchForm.addEventListener("submit", (e) => {
     .then((response) => response.json())
     .then((response) => {
       let rows = response.results;
-      const filtered = rows.filter((el) =>
-        el.original_title
-          .toLowerCase()
-          .includes(searchInput.value.toLowerCase())
+      const filtered = rows.filter(
+        (el) =>
+          el.original_title
+            .toLowerCase()
+            .includes(searchInput.value.toLowerCase())
+        // 대소문자 구분x 검색
       );
       if (filtered.length !== 0) {
-        console.log(filtered);
         document.querySelector(".container").innerHTML = "";
+        noResult.setAttribute("style", "display: none");
         createCards(filtered);
       } else {
         document.querySelector(".container").innerHTML = "";
-        let noResult = document.createElement("div");
-        noResult.className = "noResult";
-        noResult.innerText = "검색결과가 없습니다.";
-        document.querySelector(".movie").appendChild(noResult);
+        noResult.setAttribute("style", "display: block");
       }
     });
 });

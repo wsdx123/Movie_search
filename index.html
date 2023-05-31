@@ -39,11 +39,14 @@
         height: 75px;
         margin-left: 20px;
       }
+
+      /* grid 사용 */
       .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 75px;
       }
+      /* 간단한 반응형 */
       @media (max-width: 1205px) {
         .container {
           display: grid;
@@ -69,6 +72,7 @@
 
       .noResult {
         position: absolute;
+        display: none;
         top: 300px;
         align-self: center;
       }
@@ -101,13 +105,15 @@
       <header class="mytitle">
         <img src="netflix-logo.png" class="logo" />
         <form class="search" id="form">
-          <input type="text" class="inputbox" />
+          <!-- 검색창에 자동 커서 -->
+          <input type="text" class="inputbox" autofocus />
           <button type="submit" class="submitBtn">
             <img src="search.png" width="20px" />
           </button>
         </form>
       </header>
       <main class="container"></main>
+      <div class="noResult">검색결과가 없습니다.</div>
     </div>
     <script src="app.js" />
   </body>
